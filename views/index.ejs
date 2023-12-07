@@ -1,0 +1,30 @@
+<div class="container my-5">
+    <div class="row rounded-3 border shadow-lg mb-5 ">
+        <h1 class="text-center">To-do-List</h1>
+        <form class="form" action="/add" method="POST">
+            <input type="text" placeholder=" Buraya Yazabilirsin..." name="listItems" id="inputText" autocomplete="off">
+            <button type="submit">Ekle</button>
+        </form>
+    </div>
+    <div class="row rounded-3 border shadow-lg pt-3 ">
+        <h2 class="text-center"><%= today %></h2>
+        <div class="list">
+            <ul>
+                <% item.forEach(tasks=>{ %>
+                <li class="form d-flex align-items-center justify-content-between p-2"> 
+                    <div>
+                        <input type="checkbox" id="check" >
+                        <p><%= tasks.listItems %></p>
+                    </div>
+                    <div class="edit d-flex align-items-center">
+                        <form action="/delete/<%= tasks._id %>?_method=DELETE" method="POST">
+                            <input type="submit" value="Sil" class="btn">
+                            <a href="/edit/<%= tasks._id %>" class="btn">Düzenle</a>
+                        </form>
+                    </div>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</div>

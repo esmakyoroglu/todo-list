@@ -1,0 +1,110 @@
+body{
+    background-color: #dadada;
+}
+h1{
+    color: #888888;
+    text-align: center;
+}
+h2{
+    color:hotpink;
+    text-align: center;
+}
+form{
+    margin-top: 10px;
+    background:#dadada;
+    height:10vh;
+}
+#check{
+    height:15px;
+    width:15px;
+    margin: 0 10px 0 0; 
+}
+#inputText{
+    height:50px;
+    width:80%;
+    border: none;
+    margin-right: 10px;
+}
+ul li p{
+    font-size: 20px;
+    font-weight: bold;
+    display: inline; 
+    margin-right: 10px;
+    font-weight: bolder;
+    margin:0;
+}
+ul{
+    list-style: none;
+}
+input[type="checkbox"]:checked + p {
+    text-decoration: line-through;
+}
+.container{
+    height: auto;
+    width: 50%;
+}
+button{
+    border-radius: 10px;
+    background-color: #dadada;
+    color: hotpink;
+    font-size: 20px;
+    height: 40px;
+    width: 90px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 2px solid #888888;
+}
+.edit .btn {
+    border-radius: 10px;
+    color: #888888;
+    font-size: 15px;
+    height: 30px;
+    width: 66px;
+    text-decoration: none;
+    padding: 2px;
+    margin-top: 7px;
+    border: 1px solid #888888;
+    font-weight: 500;
+}
+.edit .btn:hover{
+   color: hotpink;
+}
+
+/* Checkbox'un kendisi için stil */
+input[type="checkbox"] {
+    appearance: none; /* Varsayılan tarayıcı stilini kaldır */
+    -webkit-appearance: none; /* Safari için gerekli */
+    -moz-appearance: none; /* Firefox için gerekli */
+    width: 20px;
+    height: 20px;
+    border: 2px solid hotpink;
+    border-radius: 4px;
+    outline: none;
+    position: relative;
+}
+
+/* Checkbox seçildiğinde stil */
+input[type="checkbox"]:checked {
+    background-color: hotpink;
+    border-color: hotpink;
+}
+
+/* Checkbox'un içindeki tikin rengi ve pozisyonu */
+input[type="checkbox"]::before {
+    content: '\2713'; /* Unicode tik işareti */
+    font-size: 16px;
+    color: black;
+    display: block;
+    line-height: 20px;
+    text-align: center;
+    position: absolute; 
+    top: 50%; /* Yukarıdan aşağıya ortala */
+    left: 50%; /* Soldan sağa ortala */
+    transform: translate(-50%, -50%); /* Ortalama ayarı */
+    visibility: hidden; /* Başlangıçta tikin görünmemesi için */
+}
+
+/* Checkbox seçildiğinde tikin görünmesi */
+input[type="checkbox"]:checked::before {
+    visibility: visible; /* Checkbox seçildiğinde tikin görünmesi */
+}

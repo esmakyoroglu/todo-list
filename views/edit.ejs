@@ -1,0 +1,9 @@
+<div class="container my-5">
+    <div class="row rounded-3 border shadow-lg mb-5 ">
+        <h1 class="text-center">To-do-List</h1>
+        <form class="form" action="/edit/<%= item._id %>?_method=POST" method="POST">
+            <input type="text" value="<%= item.listItems %>" name="listItems" id="inputText" autocomplete="off">
+            <button type="submit">Ekle</button>
+        </form>
+    </div>
+</div>
